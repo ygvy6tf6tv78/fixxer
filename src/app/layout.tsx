@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -9,13 +9,14 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"] 
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0B0F19",
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fixerr.in"),
   title: "Fixerr — A Better Way to Get Things Fixed",
   description: "Fixerr is building a cleaner, faster, and more trusted way to get repairs, installations, tech support, and everyday services handled professionally.",
-  themeColor: "#0B0F19",
-  icons: {
-    icon: "/favicon.png",
-  },
   openGraph: {
     title: "Fixerr — A Better Way to Get Things Fixed",
     description: "A modern service platform for repairs, installations, tech support, and maintenance — starting from Jammu, India.",
