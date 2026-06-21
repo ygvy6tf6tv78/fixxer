@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Zap, Wrench, ShieldCheck, ThermometerSnowflake } from "lucide-react";
 
 export default function ComingSoon() {
   const stagger: any = {
@@ -34,41 +34,41 @@ export default function ComingSoon() {
           animate={{ x: ["0%", "10%", "-5%", "0%"], y: ["0%", "-15%", "20%", "0%"], scale: [1, 1.05, 0.95, 1] }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
         />
-        {/* Floating Square Images */}
+        {/* Floating Glass Icons */}
         <motion.div 
-          className="cs-float-img hidden sm:block" 
-          style={{ position: "absolute", top: "15%", left: "8%", width: "140px", height: "140px" }}
-          animate={{ y: [0, -15, 0], rotate: [-2, 2, -2] }}
+          className="cs-float-icon hidden sm:flex" 
+          style={{ position: "absolute", top: "18%", left: "10%", width: "100px", height: "100px" }}
+          animate={{ y: [0, -20, 0], rotate: [-10, -2, -10] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         >
-          <Image src="/services/ac-technician.png" alt="" fill sizes="140px" />
+          <Zap size={44} color="#fbbf24" strokeWidth={1.5} />
         </motion.div>
 
         <motion.div 
-          className="cs-float-img hidden sm:block" 
-          style={{ position: "absolute", bottom: "15%", right: "8%", width: "160px", height: "160px" }}
-          animate={{ y: [0, 20, 0], rotate: [1, -3, 1] }}
+          className="cs-float-icon hidden sm:flex" 
+          style={{ position: "absolute", bottom: "22%", right: "12%", width: "110px", height: "110px" }}
+          animate={{ y: [0, 20, 0], rotate: [12, 18, 12] }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         >
-          <Image src="/services/electrician-technician.png" alt="" fill sizes="160px" />
+          <Wrench size={48} color="#60a5fa" strokeWidth={1.5} />
         </motion.div>
 
         <motion.div 
-          className="cs-float-img" 
-          style={{ position: "absolute", top: "65%", left: "-2%", width: "110px", height: "110px" }}
-          animate={{ y: [0, -25, 0], rotate: [-1, 3, -1] }}
+          className="cs-float-icon" 
+          style={{ position: "absolute", top: "60%", left: "2%", width: "90px", height: "90px" }}
+          animate={{ y: [0, -15, 0], rotate: [-15, -8, -15] }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         >
-          <Image src="/services/cctv-technician.png" alt="" fill sizes="110px" />
+          <ThermometerSnowflake size={38} color="#a78bfa" strokeWidth={1.5} />
         </motion.div>
 
         <motion.div 
-          className="cs-float-img hidden lg:block" 
-          style={{ position: "absolute", top: "10%", right: "20%", width: "100px", height: "100px" }}
-          animate={{ y: [0, 15, 0], rotate: [3, -1, 3] }}
+          className="cs-float-icon hidden lg:flex" 
+          style={{ position: "absolute", top: "12%", right: "20%", width: "84px", height: "84px" }}
+          animate={{ y: [0, 15, 0], rotate: [8, 14, 8] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         >
-          <Image src="/services/ac-technician.png" alt="" fill sizes="100px" />
+          <ShieldCheck size={36} color="#34d399" strokeWidth={1.5} />
         </motion.div>
 
         <div className="cs-noise"></div>
