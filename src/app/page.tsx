@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 export default function ComingSoon() {
-  const stagger = {
+  const stagger: any = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.55 } },
   };
 
-  const reveal = {
+  const reveal: any = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
   };
@@ -34,6 +34,43 @@ export default function ComingSoon() {
           animate={{ x: ["0%", "10%", "-5%", "0%"], y: ["0%", "-15%", "20%", "0%"], scale: [1, 1.05, 0.95, 1] }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
         />
+        {/* Floating Square Images */}
+        <motion.div 
+          className="cs-float-img hidden sm:block" 
+          style={{ position: "absolute", top: "15%", left: "8%", width: "140px", height: "140px" }}
+          animate={{ y: [0, -15, 0], rotate: [-2, 2, -2] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Image src="/services/ac-technician.png" alt="" fill sizes="140px" />
+        </motion.div>
+
+        <motion.div 
+          className="cs-float-img hidden sm:block" 
+          style={{ position: "absolute", bottom: "15%", right: "8%", width: "160px", height: "160px" }}
+          animate={{ y: [0, 20, 0], rotate: [1, -3, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        >
+          <Image src="/services/electrician-technician.png" alt="" fill sizes="160px" />
+        </motion.div>
+
+        <motion.div 
+          className="cs-float-img" 
+          style={{ position: "absolute", top: "65%", left: "-2%", width: "110px", height: "110px" }}
+          animate={{ y: [0, -25, 0], rotate: [-1, 3, -1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        >
+          <Image src="/services/cctv-technician.png" alt="" fill sizes="110px" />
+        </motion.div>
+
+        <motion.div 
+          className="cs-float-img hidden lg:block" 
+          style={{ position: "absolute", top: "10%", right: "20%", width: "100px", height: "100px" }}
+          animate={{ y: [0, 15, 0], rotate: [3, -1, 3] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+        >
+          <Image src="/services/ac-technician.png" alt="" fill sizes="100px" />
+        </motion.div>
+
         <div className="cs-noise"></div>
       </div>
 
