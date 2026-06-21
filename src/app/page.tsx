@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Sparkles, Zap, Wrench, ShieldCheck, ThermometerSnowflake } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function ComingSoon() {
   const stagger: any = {
@@ -34,43 +34,6 @@ export default function ComingSoon() {
           animate={{ x: ["0%", "10%", "-5%", "0%"], y: ["0%", "-15%", "20%", "0%"], scale: [1, 1.05, 0.95, 1] }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
         />
-        {/* Floating Glass Icons */}
-        <motion.div 
-          className="cs-float-icon hidden sm:flex" 
-          style={{ position: "absolute", top: "18%", left: "10%", width: "100px", height: "100px" }}
-          animate={{ y: [0, -20, 0], rotate: [-10, -2, -10] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Zap size={44} color="#fbbf24" strokeWidth={1.5} />
-        </motion.div>
-
-        <motion.div 
-          className="cs-float-icon hidden sm:flex" 
-          style={{ position: "absolute", bottom: "22%", right: "12%", width: "110px", height: "110px" }}
-          animate={{ y: [0, 20, 0], rotate: [12, 18, 12] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        >
-          <Wrench size={48} color="#60a5fa" strokeWidth={1.5} />
-        </motion.div>
-
-        <motion.div 
-          className="cs-float-icon" 
-          style={{ position: "absolute", top: "60%", left: "2%", width: "90px", height: "90px" }}
-          animate={{ y: [0, -15, 0], rotate: [-15, -8, -15] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        >
-          <ThermometerSnowflake size={38} color="#a78bfa" strokeWidth={1.5} />
-        </motion.div>
-
-        <motion.div 
-          className="cs-float-icon hidden lg:flex" 
-          style={{ position: "absolute", top: "12%", right: "20%", width: "84px", height: "84px" }}
-          animate={{ y: [0, 15, 0], rotate: [8, 14, 8] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        >
-          <ShieldCheck size={36} color="#34d399" strokeWidth={1.5} />
-        </motion.div>
-
         <div className="cs-noise"></div>
       </div>
 
