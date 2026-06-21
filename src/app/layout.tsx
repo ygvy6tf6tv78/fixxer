@@ -10,34 +10,32 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Fixerr | A better way to get things fixed is taking shape.",
-  description: "From everyday home repairs to trusted service support, Fixerr is building a cleaner, faster, and more reliable way to connect with the right expert. Starting from Jammu.",
-  keywords: ["Fixerr", "Jammu", "home services", "repair", "AC repair", "plumbing", "trusted experts", "service network", "Kriyon Group"],
-  authors: [{ name: "Kriyon Group Private Limited" }],
+  title: "Fixerr — A Better Way to Get Things Fixed",
+  description: "Fixerr is building a cleaner, faster, and more trusted way to get repairs, installations, tech support, and everyday services handled professionally.",
+  themeColor: "#0B0F19",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
-    title: "Fixerr | A better way to get things fixed.",
-    description: "Building a cleaner, faster, and more reliable way to connect with the right expert in Jammu. A venture by Kriyon Group.",
+    title: "Fixerr — A Better Way to Get Things Fixed",
+    description: "A modern service platform for repairs, installations, tech support, and maintenance — starting from Jammu, India.",
     url: "https://fixerr.in",
     siteName: "Fixerr",
     type: "website",
-    images: [], // Explicitly empty to prevent image previews when sharing
+    images: [
+      {
+        url: "/fixerr-og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Fixerr",
+      },
+    ],
   },
   twitter: {
-    card: "summary", 
-    title: "Fixerr | A better way to get things fixed.",
-    description: "Building a cleaner, faster, and more reliable way to connect with the right expert in Jammu.",
-    images: [], // Explicitly empty to prevent image previews when sharing
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'none', // Prevents search engines from generating image snippets
-      'max-snippet': -1,
-    },
+    card: "summary_large_image",
+    title: "Fixerr — A Better Way to Get Things Fixed",
+    description: "A cleaner, faster, and more trusted way to get things fixed.",
+    images: ["/fixerr-og-image.png"],
   },
 };
 
