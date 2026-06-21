@@ -639,9 +639,14 @@ button,input,select,textarea { font:inherit; }
 .cs-page { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #02040a; color: #fff; overflow: hidden; font-family: var(--font-sans); }
 .cs-ambient { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
 .cs-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.15; }
-.cs-orb-1 { width: 50vw; height: 50vw; top: -10%; left: -10%; background: radial-gradient(circle, rgba(37,99,255,0.8) 0%, rgba(0,0,0,0) 70%); }
-.cs-orb-2 { width: 60vw; height: 60vw; bottom: -20%; right: -10%; background: radial-gradient(circle, rgba(92,138,255,0.5) 0%, rgba(0,0,0,0) 70%); }
-.cs-orb-3 { width: 50vw; height: 50vw; top: 30%; left: 20%; background: radial-gradient(circle, rgba(30,45,75,0.6) 0%, rgba(0,0,0,0) 70%); }
+.cs-orb-1 { width: max(50vw, 400px); height: max(50vw, 400px); top: -10%; left: -10%; background: radial-gradient(circle, rgba(37,99,255,0.8) 0%, rgba(0,0,0,0) 70%); }
+.cs-orb-2 { width: max(60vw, 500px); height: max(60vw, 500px); bottom: -20%; right: -10%; background: radial-gradient(circle, rgba(92,138,255,0.5) 0%, rgba(0,0,0,0) 70%); }
+.cs-orb-3 { width: max(50vw, 400px); height: max(50vw, 400px); top: 30%; left: 20%; background: radial-gradient(circle, rgba(30,45,75,0.6) 0%, rgba(0,0,0,0) 70%); }
+@media (max-width: 768px) {
+  .cs-orb { filter: blur(70px); opacity: 0.25; }
+  .cs-orb-1 { left: -30%; top: -5%; }
+  .cs-orb-2 { right: -30%; bottom: -10%; }
+}
 .cs-float-photo { position: absolute; border-radius: 20px; overflow: hidden; opacity: 0.8; border: 1.5px solid rgba(255, 255, 255, 0.15); box-shadow: 0 10px 30px -5px rgba(0,0,0,0.6); pointer-events: none; }
 .cs-float-photo img { object-fit: cover; }
 .cs-noise { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; }

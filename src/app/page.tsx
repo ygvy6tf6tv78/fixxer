@@ -81,7 +81,7 @@ export default function ComingSoon() {
           </motion.div>
           
           <motion.h1 variants={reveal}>
-            A better way to get things fixed is{' '}
+            A better way to get things fixed is <br className="hidden sm:block" />
             <span className="cs-text-gradient">taking shape.</span>
           </motion.h1>
           
@@ -96,8 +96,8 @@ export default function ComingSoon() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
         >
-          Starting from Jammu, India.<br/>
-          A venture by Kriyon Group Private Limited.
+          <strong style={{ color: "#fff" }}>Starting from Jammu, India.</strong><br/>
+          <strong style={{ color: "#fff" }}>A venture by Kriyon Group Private Limited.</strong>
         </motion.div>
       </div>
     </main>
